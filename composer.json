@@ -1,0 +1,23 @@
+{
+    "name": "andremeireles/socket",
+    "type": "project",
+    "require": {
+        "php": "^7.4",
+        "cboden/ratchet": "^0.4.3"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Andremeireles\\Socket\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "André Meireles",
+            "email": "andre2meireles@gmail.com"
+        }
+    ]
+}
