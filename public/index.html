@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web socket</title>
+    <style>
+        input, button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="message"/>
+<button onclick="transmitMessage()">Send</button>
+    <script>
+        const socket = new WebSocket('ws://localhost:6060');
+
+        const message = document.getElementById('message');
+
+        const transmitMessage = () => {
+            socket.send(message.value);
+        }
+
+        socket.onmessage = (e) => {
+            alert(e.data);
+        }
+    </script>
+</body>
+</html>
